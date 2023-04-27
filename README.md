@@ -1,4 +1,4 @@
 # AREP-RSIs
 An one-stop platform for conducting adversarial defenses and conveniently evaluating adversarial robustness of DNN-based visual recognition system.
 Users can operate just on AREP-RSIs to perform a complete robustness evaluation with all necessary procedures, including training, adversarial attacks, tests for recognition accuracy, proactive defense and reactive defense. AREP-RSIs can be deployed on the edge devices like UAVs and connected with cameras for real-time recognition as well. Equipped with various network architectures, several training paradigms and classical defense methods, to the best of our knowledge, AREP-RSIs is the first platform for adversarial robustness improvements and evaluations in the remote sensing field. 
-The graphic interface of this platform is designed with PyQt [68] and built upon necessary libraries like Pytorch [69], Adversarial Robustness Toolbox (ART) [70 ], OpenCV  and Scikit-learn.
+The graphic interface of this platform is designed with PyQt and built upon necessary libraries like Pytorch, Adversarial Robustness Toolbox (ART), OpenCV  and Scikit-learn.
