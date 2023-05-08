@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HQ16pATR</class>
+ <widget class="QMainWindow" name="HQ16pATR">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1042</width>
+    <height>668</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBoxIMG">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>441</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文隶书</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>雷达P显干扰图像</string>
+    </property>
+    <widget class="QLabel" name="IMGDisplay">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>421</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>WaitCursor</cursorShape>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="lineWidth">
+      <number>3</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxSET">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>10</y>
+      <width>521</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文隶书</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>工作模式设定</string>
+    </property>
+    <widget class="QPushButton" name="pushButtonIMG">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>单幅图像识别</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonSEQ">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>图像序列识别</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonVID">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>视频流识别</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonVGA">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>190</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>VGA流识别</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButtonSVM">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>40</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Black</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>SVM</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButtonCNN">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>80</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Black</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>CNN</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButtonFUSION">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>110</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>融合识别</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButtonMANUAL">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>150</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>人工判读</string>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="toolButton">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>20</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 170, 0);
+font: 10pt &quot;黑体&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>系统设置</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowserIMGProperty">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>80</y>
+       <width>161</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'华文隶书'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;雷达与图像属性&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>190</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>语音播放</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxRESULT">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>360</y>
+      <width>431</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文隶书</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>干扰智能化识别</string>
+    </property>
+    <widget class="QLabel" name="labelFalseTarget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>85</red>
+           <green>255</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>85</red>
+           <green>255</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>85</red>
+           <green>255</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="font">
+      <font>
+       <family>华文隶书</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text">
+      <string>密集假目标</string>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowserFalseTarget">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>30</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'华文隶书'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowserFalseTarget_4">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>90</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelNarrowNoise">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text">
+      <string>窄带噪声</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowserNarrowNoise">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>70</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelWideNoise">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text">
+      <string>宽带噪声</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowserWideNoise">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>110</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelScan">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text">
+      <string>扫频干扰：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelComb">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>190</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text">
+      <string>梳状谱干扰</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowserScanNoise">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>150</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowserCombNoise">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>190</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelOtherNoise">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>240</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text">
+      <string>其他干扰</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowserOtherNoise">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>230</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_image_show_2">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>20</y>
+       <width>161</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxADV">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>290</y>
+      <width>511</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文隶书</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>抗干扰措施</string>
+    </property>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>461</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="page"/>
+     <widget class="QWidget" name="page_2"/>
+    </widget>
+    <widget class="QPushButton" name="startButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>310</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>滚动播放</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="previousButton">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>310</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>前一项</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="nextButton">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>310</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>后一项</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="stopButton">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>310</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>停止建议</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1042</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>P显图像采集 </string>
+    </property>
+    <addaction name="actionCAM"/>
+    <addaction name="actionVGA"/>
+    <addaction name="separator"/>
+    <addaction name="actionVIDEO"/>
+    <addaction name="separator"/>
+    <addaction name="actionIMGFile"/>
+    <addaction name="actionIMGFolder"/>
+   </widget>
+   <widget class="QMenu" name="menuTrain">
+    <property name="title">
+     <string>模型学习</string>
+    </property>
+    <addaction name="actionSVMtrain"/>
+    <addaction name="actionCNNtrain"/>
+    <addaction name="actionFUSIONtrain"/>
+   </widget>
+   <widget class="QMenu" name="menuTest">
+    <property name="title">
+     <string>图像识别</string>
+    </property>
+    <addaction name="actionSVMtest"/>
+    <addaction name="actionCNNtest"/>
+    <addaction name="actionFusiontest"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuEvaluation">
+    <property name="title">
+     <string>性能评估</string>
+    </property>
+    <addaction name="actionSVMAcc"/>
+    <addaction name="actionDNNAcc"/>
+   </widget>
+   <widget class="QMenu" name="menuManual">
+    <property name="title">
+     <string>协同抗干扰</string>
+    </property>
+    <addaction name="actionManualAnnotation"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>系统设置</string>
+    </property>
+    <addaction name="actiondata"/>
+    <addaction name="actionmodel"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTrain"/>
+   <addaction name="menuTest"/>
+   <addaction name="menuEvaluation"/>
+   <addaction name="menuManual"/>
+   <addaction name="menuSettings"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSVMtrain">
+   <property name="text">
+    <string>SVM</string>
+   </property>
+  </action>
+  <action name="actionshape">
+   <property name="text">
+    <string>纹理特征</string>
+   </property>
+  </action>
+  <action name="actionIMGFile">
+   <property name="text">
+    <string>单幅图像</string>
+   </property>
+  </action>
+  <action name="actionIMGFolder">
+   <property name="text">
+    <string>图像序列</string>
+   </property>
+  </action>
+  <action name="actionManualAnnotation">
+   <property name="text">
+    <string>人工交互判读</string>
+   </property>
+  </action>
+  <action name="actionCNNtrain">
+   <property name="text">
+    <string>DCNN</string>
+   </property>
+  </action>
+  <action name="actionFUSIONtrain">
+   <property name="text">
+    <string>融合识别</string>
+   </property>
+   <property name="iconText">
+    <string>融合识别</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>几何特征</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>深度编码</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>时频特征</string>
+   </property>
+  </action>
+  <action name="actionSVMtest">
+   <property name="text">
+    <string>SVM</string>
+   </property>
+  </action>
+  <action name="actionCNNtest">
+   <property name="text">
+    <string>DCNN</string>
+   </property>
+  </action>
+  <action name="actionFusiontest">
+   <property name="text">
+    <string>融合识别</string>
+   </property>
+  </action>
+  <action name="actionDNN">
+   <property name="text">
+    <string>DNN分类</string>
+   </property>
+  </action>
+  <action name="actionSVMAcc">
+   <property name="text">
+    <string>SVM批测试</string>
+   </property>
+  </action>
+  <action name="actionDNNAcc">
+   <property name="text">
+    <string>DNN批测试</string>
+   </property>
+  </action>
+  <action name="actionCAM">
+   <property name="text">
+    <string>摄像头录屏采集</string>
+   </property>
+  </action>
+  <action name="actionVGA">
+   <property name="text">
+    <string>VGA板卡采集</string>
+   </property>
+  </action>
+  <action name="actionVIDEO">
+   <property name="text">
+    <string>离线视频</string>
+   </property>
+  </action>
+  <action name="actiondata">
+   <property name="text">
+    <string>干扰图像库</string>
+   </property>
+  </action>
+  <action name="actionmodel">
+   <property name="text">
+    <string>深度模型架构</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

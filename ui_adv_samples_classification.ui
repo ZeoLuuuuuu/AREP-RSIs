@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CNN_dataset_test</class>
+ <widget class="QDialog" name="CNN_dataset_test">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1807</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>遥感影像单张识别测试</string>
+  </property>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>36</x>
+     <y>30</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>模型地址:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>272</x>
+     <y>375</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>开始识别</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_21">
+   <property name="geometry">
+    <rect>
+     <x>35</x>
+     <y>123</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>遥感影像数据选择：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_image_show">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>440</y>
+     <width>291</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>713</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>当前测试原始样本</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_CNN_classification_imagetest_model_address">
+   <property name="geometry">
+    <rect>
+     <x>93</x>
+     <y>80</y>
+     <width>531</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(243, 243, 243);</string>
+   </property>
+   <property name="text">
+    <string>pkl_save\uc_resnet18.pkl</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_CNN_classification_imagetest_model_address">
+   <property name="geometry">
+    <rect>
+     <x>623</x>
+     <y>80</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(98, 98, 98);</string>
+   </property>
+   <property name="text">
+    <string>…</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>37</x>
+     <y>235</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>对抗欺骗方法：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_image_show_2">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>440</y>
+     <width>281</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>431</x>
+     <y>715</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>当前测试对抗样本</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_2">
+   <property name="geometry">
+    <rect>
+     <x>271</x>
+     <y>188</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string> FGSC-23</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_4">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>187</y>
+     <width>89</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>  UC</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton">
+   <property name="geometry">
+    <rect>
+     <x>397</x>
+     <y>188</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string> FUSAR-Ship</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_3">
+   <property name="geometry">
+    <rect>
+     <x>148</x>
+     <y>187</y>
+     <width>101</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string> MSTAR</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_11">
+   <property name="geometry">
+    <rect>
+     <x>553</x>
+     <y>185</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string> Sorted-Cars</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>33</x>
+     <y>297</y>
+     <width>651</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QRadioButton" name="radioButton_8">
+    <property name="geometry">
+     <rect>
+      <x>115</x>
+      <y>3</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string> Deepfool</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_5">
+    <property name="geometry">
+     <rect>
+      <x>26</x>
+      <y>9</y>
+      <width>89</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string> PGD</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_6">
+    <property name="geometry">
+     <rect>
+      <x>238</x>
+      <y>10</y>
+      <width>89</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>  C&amp;W</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_7">
+    <property name="geometry">
+     <rect>
+      <x>362</x>
+      <y>8</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string> Threshold</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_10">
+    <property name="geometry">
+     <rect>
+      <x>516</x>
+      <y>9</y>
+      <width>89</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string> UAP</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>812</x>
+     <y>497</y>
+     <width>301</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>原始样本深度特征激活图</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_image_show_4">
+   <property name="geometry">
+    <rect>
+     <x>1276</x>
+     <y>11</y>
+     <width>511</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_image_show_3">
+   <property name="geometry">
+    <rect>
+     <x>715</x>
+     <y>10</y>
+     <width>511</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>1386</x>
+     <y>496</y>
+     <width>301</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>对抗样本深度特征激活图</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Result_show">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>560</y>
+     <width>1061</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="text">
+    <string>结果输出：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
